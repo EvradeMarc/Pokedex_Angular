@@ -56,6 +56,7 @@ export class PokemonEditComponent {
   getChipTextColor(type: string): 'black' | 'white' {
     return type == 'Electrik' ? 'black' : 'white';
   }
+  
 
   onSubmit(){
     console.log(this.form.value)
