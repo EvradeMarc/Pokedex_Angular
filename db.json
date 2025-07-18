@@ -14,11 +14,13 @@
     {
       "id": 3,
       "name": "Carapuce",
-      "life": 30,
+      "life": 22,
       "damage": 10,
       "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png",
       "types": [
-        "Eau"
+        "Eau",
+        "Plante",
+        "Insecte"
       ],
       "created": "2024-08-16T00:00:00Z",
       "pokemonTypeList": [
@@ -45,18 +47,6 @@
       "life": 30,
       "damage": 7,
       "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/016.png",
-      "types": [
-        "Normal",
-        "Vol"
-      ],
-      "created": "2024-08-16T00:00:00Z"
-    },
-    {
-      "id": 7,
-      "name": "Piafabec",
-      "life": 14,
-      "damage": 5,
-      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/021.png",
       "types": [
         "Normal",
         "Vol"
