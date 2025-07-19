@@ -109,6 +109,18 @@
       ],
       "created": "2025-07-19T09:45:51.378Z",
       "id": 12
+    },
+    {
+      "name": "Jirachi",
+      "picture": "https://www.pokepedia.fr/images/thumb/0/0a/Jirachi-RS.png/800px-Jirachi-RS.png",
+      "life": 10,
+      "damage": 6,
+      "types": [
+        "Fée",
+        "Vol"
+      ],
+      "created": "2025-07-19T17:32:03.794Z",
+      "id": 13
     }
   ]
 }
