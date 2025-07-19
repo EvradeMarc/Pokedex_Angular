@@ -132,8 +132,6 @@ export class PokemonEditComponent {
     this.pokemonLife.setValue(newValue);
   }
 
-
-
   get pokemonDamage(): FormControl {
     return this.form.get('damage') as FormControl;
   }

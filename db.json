@@ -18,9 +18,9 @@
       "damage": 10,
       "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png",
       "types": [
-        "Eau",
         "Plante",
-        "Insecte"
+        "Insecte",
+        "Eau"
       ],
       "created": "2024-08-16T00:00:00Z",
       "pokemonTypeList": [
@@ -96,6 +96,19 @@
         "Fée"
       ],
       "created": "2024-08-16T00:00:00Z"
+    },
+    {
+      "name": "Mewtwo",
+      "picture": "https://eternia.fr/public/media//pokedex/artworks/150.png",
+      "life": 30,
+      "damage": 10,
+      "types": [
+        "Feu",
+        "Vol",
+        "Fée"
+      ],
+      "created": "2025-07-19T09:45:51.378Z",
+      "id": 12
     }
   ]
 }
