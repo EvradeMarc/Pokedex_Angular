@@ -1,59 +1,87 @@
-# AngularPokedexApp
+# Application Pokédex Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.4.
+Une application Angular robuste pour gérer une collection de Pokémon, intégrant l'authentification, le routage et une architecture à double source de données. Construite avec **Angular 20**.
 
-## Development server
+## 🚀 Fonctionnalités
 
-To start a local development server, run:
+Ce projet démontre des modèles Angular avancés et une architecture propre :
 
+*   **🔒 Système d'Authentification** : Accès sécurisé avec une page de connexion et un `AuthGuard` protégeant les routes administratives.
+*   **📖 Gestion du Pokédex (CRUD)** :
+    *   **Liste** : Parcourir tous les Pokémon disponibles avec des indicateurs visuels de type.
+    *   **Détail** : Voir les statistiques détaillées (PV, Dégâts, Types) et la date de création.
+    *   **Édition** : Modifier les détails des Pokémon existants via un formulaire réactif.
+    *   **Ajout** : Enregistrer de nouveaux Pokémon dans le Pokédex.
+*   **🎨 Interface Utilisateur Dynamique** :
+    *   **Directives Personnalisées** : Couleurs de bordure dynamiques basées sur les types de Pokémon (`PokemonBorderDirective`).
+    *   **Design Responsive** : Interface propre et accessible.
+*   **⚙️ Architecture Avancée** :
+    *   **Stratégie de Double Service de Données** : Implémente un modèle "Factory Provider" pour basculer de manière transparente entre `PokemonLocalStorageService` (Production) et `PokemonJSONServerService` (Développement).
+    *   **Configuration par Environnement** : Configurations de build basées sur l'environnement.
+
+## 🛠️ Stack Technique
+
+*   **Framework** : Angular 20
+*   **Langage** : TypeScript 5.8
+*   **État/Asynchrone** : RxJS 7
+*   **Style** : CSS Vanilla (Scope par composant)
+*   **Tests** : Jasmine & Karma
+*   **Mock Backend** : JSON Server (pour l'API de développement)
+
+## 📦 Installation et Configuration
+
+### Prérequis
+*   Node.js (version LTS recommandée)
+*   npm
+
+### 1. Cloner le dépôt
 ```bash
-ng serve
+git clone <url-du-depot>
+cd Pokedex_Angular
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+### 2. Installer les dépendances
 ```bash
-ng generate component component-name
+npm install
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## ▶️ Lancer l'Application
 
+### Mode Développement (avec API)
+Pour exécuter l'application avec le backend JSON simulé, vous avez besoin de deux terminaux :
+
+1.  **Démarrer le Serveur API** :
+    ```bash
+    npm run start:api
+    ```
+    *Démarre `json-server` sur le port 3000.*
+
+2.  **Démarrer le Serveur de Développement Angular** :
+    ```bash
+    npm start
+    ```
+    *Ouvre l'application à l'adresse `http://localhost:4200`.*
+
+### Build pour la Production
 ```bash
-ng generate --help
+npm run build
 ```
+Les artefacts de build seront stockés dans le dossier `dist/`.
 
-## Building
+## 📂 Structure du Projet
 
-To build the project run:
-
-```bash
-ng build
 ```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+src/
+├── app/
+│   ├── core/           # Services singleton et guards (AuthGuard)
+│   ├── login/          # Module de fonctionnalité de connexion
+│   ├── pokemon/        # Module principal de fonctionnalité Pokémon
+│   │   ├── pokemon-list/
+│   │   ├── pokemon-profile/
+│   │   ├── pokemon-edit/
+│   │   └── pokemon-add/
+│   ├── shared/         # Ressources partagées (si présentes)
+│   └── app.config.ts   # Configuration de l'app et Providers DI
+├── assets/             # Images et ressources statiques
+└── environments/       # Configs d'environnement (prod/dev)
 ```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
