@@ -1,4 +1,5 @@
 # Application Pokédex Angular
+Lien vers l'application : https://pokedex-a2776.web.app/
 
 Une application Angular robuste pour gérer une collection de Pokémon, intégrant l'authentification, le routage et une architecture à double source de données. Construite avec **Angular 20**.
 
